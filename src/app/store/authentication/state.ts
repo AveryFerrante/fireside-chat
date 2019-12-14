@@ -12,3 +12,5 @@ export const initialState: State = {
     isLoading: false,
     error: null
 };
+
+export const featureKey = 'user';

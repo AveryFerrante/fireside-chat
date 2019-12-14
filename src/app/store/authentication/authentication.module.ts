@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducer';
+import { AuthenticationEffects } from './effects';
+import { featureKey } from './state';
 
 
 
@@ -11,8 +13,9 @@ import { reducer } from './reducer';
   declarations: [],
   imports: [
     CommonModule,
-    StoreModule.forFeature('user', reducer),
-    EffectsModule.forFeature([])
-  ]
+    StoreModule.forFeature(featureKey, reducer),
+    EffectsModule.forFeature([AuthenticationEffects])
+  ],
+  providers: [AuthenticationEffects]
 })
 export class AuthenticationModule { }
