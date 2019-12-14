@@ -1,7 +1,20 @@
-IsLoading: {{ userLoading$ | async }}
-User: {{ user$ | async | json }}
-
-<button (click)="createUser()">Create User</button>
-
-<button (click)="loginGoogle()">Login using Google</button>
-<button (click)="logout()">Logout</button>
+<div class="base center">
+    <div class="login-card">
+        <div class="login-card-header">
+            <h2>Login</h2>
+        </div>
+        <div class="login-card-body">
+            <div class="input-row mb-3">
+                <span class="input-label">Email: </span>
+                <input type="text" />
+            </div>
+            <div class="input-row mb-3">
+                <span class="input-label">Password: </span>
+                <input type="password" />
+            </div>
+            <div class="input-row">
+                <button class="btn submit-button">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
