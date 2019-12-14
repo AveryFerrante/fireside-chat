@@ -1,11 +1,8 @@
-export interface State {
-    applicationData: ApplicationData;
-    clientState: ClientState;
-}
+import { User } from '../shared/models/user';
 
-export interface ApplicationData {
-    // This will grow as I create more application data types
-    error: string;
+export interface State {
+    user: User;
+    clientState: ClientState;
 }
 
 export interface ClientState {

@@ -1,1 +1,7 @@
-<p>login works!</p>
+IsLoading: {{ userLoading$ | async }}
+User: {{ user$ | async | json }}
+
+<button (click)="createUser()">Create User</button>
+
+<button (click)="loginGoogle()">Login using Google</button>
+<button (click)="logout()">Logout</button>
