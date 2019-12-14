@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { StoreModule as NgrxStoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { AuthenticationModule } from './authentication/authentication.module';
 
 
 
@@ -11,7 +12,8 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     CommonModule,
     NgrxStoreModule.forRoot({}),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    AuthenticationModule
 
   ]
 })
