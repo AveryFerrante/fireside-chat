@@ -1,7 +1,7 @@
-import { User } from '../shared/models/user';
+import { AuthenticationState } from './authentication';
 
 export interface State {
-    user: User;
+    authenticationState: AuthenticationState.State;
     clientState: ClientState;
 }
 

@@ -11,11 +11,17 @@ import { environment } from 'src/environments/environment';
 import { LoginComponent } from './login/login.component';
 import { StoreModule } from './store';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MessagingComponent } from './messaging/messaging.component';
+import { ChatWindowComponent } from './messaging/chat-window/chat-window.component';
+import { ThreadsComponent } from './messaging/threads/threads.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    MessagingComponent,
+    ChatWindowComponent,
+    ThreadsComponent
   ],
   imports: [
     BrowserModule,

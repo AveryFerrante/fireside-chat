@@ -13,4 +13,4 @@ export const initialState: State = {
     error: null
 };
 
-export const featureKey = 'user';
+export const featureKey = 'authenticationState';

@@ -13,6 +13,16 @@ export const environment = {
     messagingSenderId: '357240222565',
     appId: '1:357240222565:web:62a047fbfec18bb03aa78c',
     measurementId: 'G-YXNDBQ6NQ8'
+  },
+  collections: {
+    threads: {
+      name: 'Threads',
+      subCollections: {
+        messages: {
+          name: 'Messages'
+        }
+      }
+    }
   }
 };
 

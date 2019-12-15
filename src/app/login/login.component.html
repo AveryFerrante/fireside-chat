@@ -1,5 +1,5 @@
 <div class="base column vertical-center">
-
+    {{ user$ | async | json }}
     <h1 class="mt-5">Fireside Chat</h1>
     <div class="header-logo mb-3">
         <fa-icon [icon]="faFire" class="mr-3"></fa-icon>
@@ -48,7 +48,10 @@
                 </div>
             </ng-template>
             <div class="input-row">
-                <button class="btn submit-button">Submit</button>
+                <button class="btn submit-button" (click)="createUser()">Submit</button>
+            </div>
+            <div class="input-row">
+                <button class="btn submit-button" (click)="logout()">Logout</button>
             </div>
         </div>
     </div>
