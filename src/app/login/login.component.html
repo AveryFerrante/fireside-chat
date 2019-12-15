@@ -1,17 +1,52 @@
-<div class="base center">
-    <div class="login-card">
+<div class="base column vertical-center">
+
+    <h1 class="mt-5">Fireside Chat</h1>
+    <div class="header-logo mb-3">
+        <fa-icon [icon]="faFire" class="mr-3"></fa-icon>
+        <fa-icon [icon]="faComments"></fa-icon>
+    </div>
+
+
+    <div class="login-card mt-5">
         <div class="login-card-header">
             <h2>Login</h2>
         </div>
         <div class="login-card-body">
-            <div class="input-row mb-3">
-                <span class="input-label">Email: </span>
-                <input type="text" />
-            </div>
-            <div class="input-row mb-3">
-                <span class="input-label">Password: </span>
-                <input type="password" />
-            </div>
+            <ng-container *ngIf="showLogin; else showSignup">
+                <span class="mb-3 mr-auto ml-auto">Don't have an account? <a (click)="showLogin = false">Sign-up</a></span>
+                <div class="input-row mb-3">
+                    <span class="input-label">Email: </span>
+                    <input type="text" />
+                </div>
+                <div class="input-row mb-3">
+                    <span class="input-label">Password: </span>
+                    <input type="password" />
+                </div>
+            </ng-container>
+
+            <ng-template #showSignup>
+                <span class="mb-3 mr-auto ml-auto">Already have an account? <a (click)="showLogin = true">Login</a></span>
+                <div class="input-row mb-3">
+                    <span class="input-label">Email: </span>
+                    <input type="text" />
+                </div>
+                <div class="input-row mb-3">
+                    <span class="input-label">First Name: </span>
+                    <input type="text" />
+                </div>
+                <div class="input-row mb-3">
+                    <span class="input-label">Last Name: </span>
+                    <input type="text" />
+                </div>
+                <div class="input-row mb-3">
+                    <span class="input-label">Password: </span>
+                    <input type="password" />
+                </div>
+                <div class="input-row mb-3">
+                    <span class="input-label">Confirm Password: </span>
+                    <input type="password" />
+                </div>
+            </ng-template>
             <div class="input-row">
                 <button class="btn submit-button">Submit</button>
             </div>

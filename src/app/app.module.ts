@@ -10,6 +10,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { LoginComponent } from './login/login.component';
 import { StoreModule } from './store';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StoreModule } from './store';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    StoreModule
+    StoreModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
