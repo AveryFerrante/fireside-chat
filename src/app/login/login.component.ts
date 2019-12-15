@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { AuthenticationActions, AuthenticationSelectors, StoreState } from '../store';
 import { NewUserRequest } from '../shared/models/requests/newUserRequest';
-import { faFire, faComments} from '@fortawesome/free-solid-svg-icons'
+import { faFire, faComments} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
